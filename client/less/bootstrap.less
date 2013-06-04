@@ -1,0 +1,144 @@
+/*!
+ * Bootstrap v3.0.0
+ *
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world by @mdo and @fat.
+ */
+
+// Core variables and mixins
+@import "variables.lessimport";
+@import "mixins.lessimport";
+
+// Reset
+@import "normalize.lessimport";
+@import "print.lessimport";
+
+// Core CSS
+@import "scaffolding.lessimport";
+@import "type.lessimport";
+@import "code.lessimport";
+@import "grid.lessimport";
+
+@import "tables.lessimport";
+@import "forms.lessimport";
+@import "buttons.lessimport";
+
+// Components: common
+@import "component-animations.lessimport";
+@import "glyphicons.lessimport";
+@import "dropdowns.lessimport";
+@import "list-group.lessimport";
+@import "panels.lessimport";
+@import "wells.lessimport";
+@import "close.lessimport";
+
+// Components: Nav
+@import "navs.lessimport";
+@import "navbar.lessimport";
+@import "button-groups.lessimport";
+@import "breadcrumbs.lessimport";
+@import "pagination.lessimport";
+@import "pager.lessimport";
+
+// Components: Popovers
+@import "modals.lessimport";
+@import "tooltip.lessimport";
+@import "popovers.lessimport";
+
+// Components: Misc
+@import "alerts.lessimport";
+@import "thumbnails.lessimport";
+@import "media.lessimport";
+@import "labels.lessimport";
+@import "badges.lessimport";
+@import "progress-bars.lessimport";
+@import "accordion.lessimport";
+@import "carousel.lessimport";
+@import "jumbotron.lessimport";
+
+// Utility classes
+@import "utilities.lessimport"; // Has to be last to override when necessary
+@import "responsive-utilities.lessimport";
+
+body{
+
+}
+.bs-header {
+  font-size: 21px;
+  text-align: left;
+}
+.bs-header h1 {
+  font-size: 60px;
+  line-height: 1;
+}
+.bs-header {
+  padding: 10px 30px 20px;
+  font-size: 16px;
+  color: #5a5a5a;
+  text-align: center;
+  border-bottom: 3px solid #F7DFA3;
+  background-color: #FFFFE7;
+  background-image: url(/img/white_tile.png);
+}
+.bs-header h1 {
+  color: #FFC500;
+}
+.bs-header p {
+  font-weight: 300;
+  line-height: 1.5;
+}
+.navbar-toggle{
+	background-color: #fff;
+}
+@media screen and (min-width: 768px)
+{
+	.bs-header {
+		font-size: 21px;
+		text-align: left;
+	}
+}
+
+
+.form-login, .form-signup {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-login .form-login-heading,
+.form-login .checkbox {
+  margin-bottom: 10px;
+}
+.form-login .checkbox {
+  font-weight: normal;
+}
+.form-signup input,
+.form-login input[type="text"],
+.form-login input[type="password"] {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form-login input[type="text"]:focus,
+.form-login input[type="password"]:focus {
+  z-index: 2;
+}
+.form-login input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-login input[type="password"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signup input,
+.form-login input[type="password"]{
+  margin-bottom: 10px;
+}

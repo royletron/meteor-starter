@@ -1,0 +1,42 @@
+<template name="navigation">
+	<div class="navbar navbar-static-top">
+		<div class="container">
+
+			<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<!-- Be sure to leave the brand out there if you want it shown -->
+			<a class="navbar-brand" href="#">Title</a>
+
+			<!-- Place everything within .navbar-collapse to hide it until above 768px -->
+      {{ loginButtons }}
+			<div class="nav-collapse collapse navbar-responsive-collapse">
+				<ul class="nav navbar-nav">
+					<li {{#if pageNavEquals 'home'}}class="active"{{/if}}><a href="{{rootPath}}"><i class="glyphicon glyphicon-home"> </i> Home</a></li>
+					<li {{#if pageNavEquals 'places'}}class="active"{{/if}}><a href="{{placesPath}}"><i class="glyphicon glyphicon-map-marker"> </i> Places</a></li>
+					{{#if currentUser}}
+						<li><a href="#"><i class="glyphicon glyphicon-globe"> </i> Your Places</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-pencil"> </i> Add</a></li>
+						<li class="visible-sm"><a href="#">{{currentUser.profile.name}}</a></li>
+						<li class="visible-sm"><a href="{{logoutPath}}"><i class="glyphicon glyphicon-user"> </i> Logout</a></li>
+					{{else}}
+						<li class="visible-sm"><a href="{{loginPath}}"><i class="glyphicon glyphicon-user"> </i> Login</a></li>
+					{{/if}}
+				</ul>
+				<ul class="nav navbar-nav pull-right hidden-sm">
+					{{#if currentUser}}
+						<li>
+						<p class="navbar-text">Signed in as <a href="#" class="navbar-link">{{currentUser.profile.name}}</a></p></li>
+						<li><a href="{{logoutPath}}"><i class="glyphicon glyphicon-user"> </i> Logout</a></li>
+					{{else}}
+						<li {{#if pageNavEquals 'login'}}class="active"{{/if}}><a href="{{loginPath}}"><i class="glyphicon glyphicon-user"> </i> Login</a></li>
+					{{/if}}
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</div><!-- /.navbar -->
+</template>

@@ -1,0 +1,14 @@
+<template name="login">
+	<div class="container">
+		<form class="form-login" id="login-form">
+			<h2 class="form-login-heading">Please sign in</h2>
+			<input type="text" id="login-email" class="input-block-level" placeholder="Email address" autofocus="" />
+			<input type="password" class="input-block-level" placeholder="Password" id="login-password" />
+			<button class="btn btn-large btn-primary btn-block" id="login-button" type="submit">Sign in</button>
+			<ul class="nav nav-tabs" style="margin-top:10px;">
+  			<li><a href="{{signupPath}}">Register</a></li>
+  			<li><a href="#">Forgot Password?</a></li>
+			</ul>
+		</form> 
+	</div>
+</template>
