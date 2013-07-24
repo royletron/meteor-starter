@@ -11,8 +11,8 @@ A project to get started with Meteor, includes:
 
 Make sure you have installed Meteor and Meteorite
 
-[Meteor](http://docs.meteor.com/)
-[Meteorite](https://github.com/oortcloud/meteorite)
+* [Meteor](http://docs.meteor.com/)
+* [Meteorite](https://github.com/oortcloud/meteorite)
 
 Then clone the project, go into the directory and run
 
